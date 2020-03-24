@@ -1,0 +1,26 @@
+{
+  "name": "webhook",
+  "version": "1.0.0",
+  "description": "Exemple d'intégration du webhook de RDV-Solidarités",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build"
+  },
+  "author": "Thomas Guillet",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "faunadb": "^2.13.0",
+    "husky": "^4.2.3",
+    "lodash": "^4.17.15",
+    "next": "^9.3.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
