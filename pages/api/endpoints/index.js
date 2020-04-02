@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
       q.Map(
         q.Paginate(
           q.Match(
-            q.Index('all_endpoints')
+            q.Index('endpoints')
           )
         ),
         ref => q.Get(ref)

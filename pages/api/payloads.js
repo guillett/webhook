@@ -5,8 +5,9 @@ module.exports = async (req, res) => {
     const dbs = await client.query(
       q.Map(
         q.Paginate(
-          q.Match(
-            q.Index('all_payloads')
+          q.Match( // Public payloads only
+            q.Index('payloads_by_secret_status'),
+            false
           )
         ),
         ref => q.Get(ref)

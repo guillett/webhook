@@ -47,7 +47,7 @@ export default () => {
             payloads.map(d => (
               <div>
                 <h3>ID: {d.ref['@ref'].id}</h3>
-                <pre>{JSON.stringify(d, null, 2)}</pre>
+                <pre>{JSON.stringify(d.data, null, 2)}</pre>
               </div>
             ))
           ) : (
