@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Header>
+      <SdkClientVersion xmlns="http://schemas.microsoft.com/xrm/2011/Contracts">9.0</SdkClientVersion>
+   </s:Header>
+   <s:Body>
+      <Execute xmlns="http://schemas.microsoft.com/xrm/2011/Contracts/Services" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+         <request xmlns:a="http://schemas.microsoft.com/xrm/2011/Contracts" xmlns:b="http://schemas.microsoft.com/crm/2011/Contracts" i:type="b:BookRequest">
+            <a:Parameters xmlns:b="http://schemas.datacontract.org/2004/07/System.Collections.Generic">
+               <a:KeyValuePairOfstringanyType>
+                  <b:key>Target</b:key>
+                  <b:value i:type="a:Entity">
+                     <a:Attributes>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>scheduledstart</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:dateTime">{{scheduledstart}}</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>ownerid</b:key>
+                           <b:value i:type="a:EntityReference">
+                              <a:Id>{{ownerid}}</a:Id>
+                              <a:LogicalName>team</a:LogicalName>
+                           </b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_teldemandeurnotif</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_telbeneficiairenotif</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_flagenvoicourrieldemandeur</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_creationrdv</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">true</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_motif</b:key>
+                           <b:value i:type="a:EntityReference">
+                              <a:Id>{{cap_motif}}</a:Id>
+                              <a:LogicalName>cap_listemotifs</a:LogicalName>
+                           </b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>instancetypecode</b:key>
+                           <b:value i:type="a:OptionSetValue">
+                              <a:Value>0</a:Value>
+                           </b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_demandeur</b:key>
+                           <b:value i:type="a:EntityReference">
+                              <a:Id>{{cap_demandeur}}</a:Id>
+                              <a:LogicalName>contact</a:LogicalName>
+                           </b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>prioritycode</b:key>
+                           <b:value i:type="a:OptionSetValue">
+                              <a:Value>1</a:Value>
+                           </b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_flagenvoicourrielbeneficiaire</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_professionnel</b:key>
+                           <b:value i:type="a:EntityReference">
+                              <a:Id>{{cap_professionnel}}</a:Id>
+                              <a:LogicalName>systemuser</a:LogicalName>
+                           </b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>scheduledend</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:dateTime">{{scheduledend}}</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_flagfiltrecentre</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">true</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>statuscode</b:key>
+                           <b:value i:type="a:OptionSetValue">
+                              <a:Value>5</a:Value>
+                           </b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_flagenvoismsbeneficiaire</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_sousmotif</b:key>
+                           <b:value i:type="a:EntityReference">
+                              <a:Id>{{cap_sousmotif}}</a:Id>
+                              <a:LogicalName>cap_listemotifs</a:LogicalName>
+                           </b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_centreid</b:key>
+                           <b:value i:type="a:EntityReference">
+                              <a:Id>{{cap_centreid}}</a:Id>
+                              <a:LogicalName>cap_site</a:LogicalName>
+                           </b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_collectif</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_flagenvoismsautre</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>isalldayevent</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>organizer</b:key>
+                           <b:value i:type="a:EntityCollection">
+                              <a:Entities>
+                                 <a:Entity>
+                                    <a:Attributes>
+                                       <a:KeyValuePairOfstringanyType>
+                                          <b:key>partyid</b:key>
+                                          <b:value i:type="a:EntityReference">
+                                             <a:Id>{{cap_professionnel}}</a:Id>
+                                             <a:LogicalName>systemuser</a:LogicalName>
+                                          </b:value>
+                                       </a:KeyValuePairOfstringanyType>
+                                    </a:Attributes>
+                                    <a:EntityState i:nil="true" />
+                                    <a:FormattedValues />
+                                    <a:LogicalName>activityparty</a:LogicalName>
+                                    <a:RelatedEntities />
+                                 </a:Entity>
+                              </a:Entities>
+                           </b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_annulation</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>mas_service</b:key>
+                           <b:value i:type="a:EntityReference">
+                              <a:Id>{{mas_service}}</a:Id>
+                              <a:LogicalName>service</a:LogicalName>
+                           </b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_courrielbeneficiairenotif</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_beneficiaire</b:key>
+                           <b:value i:type="a:EntityReference">
+                              <a:Id>{{cap_beneficiaire}}</a:Id>
+                              <a:LogicalName>contact</a:LogicalName>
+                           </b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>requiredattendees</b:key>
+                           <b:value i:type="a:EntityCollection">
+                              <a:Entities>
+                                 <a:Entity>
+                                    <a:Attributes>
+                                       <a:KeyValuePairOfstringanyType>
+                                          <b:key>partyid</b:key>
+                                          <b:value i:type="a:EntityReference">
+                                             <a:Id>{{cap_professionnel}}</a:Id>
+                                             <a:LogicalName>systemuser</a:LogicalName>
+                                          </b:value>
+                                       </a:KeyValuePairOfstringanyType>
+                                    </a:Attributes>
+                                    <a:EntityState i:nil="true" />
+                                    <a:FormattedValues />
+                                    <a:LogicalName>activityparty</a:LogicalName>
+                                    <a:RelatedEntities />
+                                 </a:Entity>
+                                 <a:Entity>
+                                    <a:Attributes>
+                                       <a:KeyValuePairOfstringanyType>
+                                          <b:key>partyid</b:key>
+                                          <b:value i:type="a:EntityReference">
+                                             <a:Id>{{equipment}}</a:Id>
+                                             <a:LogicalName>equipment</a:LogicalName>
+                                          </b:value>
+                                       </a:KeyValuePairOfstringanyType>
+                                    </a:Attributes>
+                                    <a:EntityState i:nil="true" />
+                                    <a:FormattedValues />
+                                    <a:LogicalName>activityparty</a:LogicalName>
+                                    <a:RelatedEntities />
+                                 </a:Entity>
+                              </a:Entities>
+                           </b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_courrieldemandeurnotif</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_flagenvoicourrielautre</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_vad</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>isdraft</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_traitementpresentationrdv</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_flagenvoismsdemandeur</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>scheduleddurationminutes</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:int">30</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>subject</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:string">[GRC]</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_flagintervenant</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">true</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_absence</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                        <a:KeyValuePairOfstringanyType>
+                           <b:key>cap_creedepuisaccueil</b:key>
+                           <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">false</b:value>
+                        </a:KeyValuePairOfstringanyType>
+                     </a:Attributes>
+                     <a:EntityState i:nil="true" />
+                     <a:FormattedValues />
+                     <a:LogicalName>appointment</a:LogicalName>
+                     <a:RelatedEntities />
+                  </b:value>
+               </a:KeyValuePairOfstringanyType>
+               <a:KeyValuePairOfstringanyType>
+                  <b:key>MaintainLegacyAppServerBehavior</b:key>
+                  <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">true</b:value>
+               </a:KeyValuePairOfstringanyType>
+               <a:KeyValuePairOfstringanyType>
+                  <b:key>ReturnNotifications</b:key>
+                  <b:value xmlns:c="http://www.w3.org/2001/XMLSchema" i:type="c:boolean">true</b:value>
+               </a:KeyValuePairOfstringanyType>
+            </a:Parameters>
+            <a:RequestId i:nil="true" />
+            <a:RequestName>Book</a:RequestName>
+         </request>
+      </Execute>
+   </s:Body>
+</s:Envelope>
