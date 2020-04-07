@@ -21,9 +21,9 @@ Service disponible https://rdv-solidarites-webhook.now.sh
 
 Des routines d'exmple ont été partagées
 
-- [`sign.cs`](blob/master/c-sharp/sign.cs) montre comment vérifier une signature à partir
+- [`sign.cs`](c-sharp/sign.cs) montre comment vérifier une signature à partir
   - d'un secret,
   - d'un texte et
   d'une signature de comparaison
-- [`json.cs`](blob/master/c-sharp/json.cs) montre comment manipuler le contenu en JSON
-- [`Server.cs`](blob/master/c-sharp/Server.cs) est un serveur de base qui vérifie que les requêtes HTTP soit bien signées
+- [`json.cs`](c-sharp/json.cs) montre comment manipuler le contenu en JSON
+- [`Server.cs`](c-sharp/Server.cs) est un serveur de base qui vérifie que les requêtes HTTP soit bien signées
