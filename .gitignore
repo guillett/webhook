@@ -1,3 +1,4 @@
 .env
+*.exe
 .next
 node_modules

@@ -1,5 +1,5 @@
-// Filename:  HttpServer.cs        
-// Author:    Benjamin N. Summerton <define-private-public>        
+// Filename:  HttpServer.cs
+// Author:    Benjamin N. Summerton <define-private-public>
 // License:   Unlicense (http://unlicense.org/)
 
 using System;
