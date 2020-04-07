@@ -48,6 +48,6 @@ export default async (req, res) => {
       response: req.response
     })
   } catch (e) {
-   vres.status(500).json({ error: e.message })
+    res.status(500).json({ error: e.message })
   }
 }
