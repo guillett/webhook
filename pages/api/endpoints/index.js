@@ -16,7 +16,8 @@ module.exports = async (req, res) => {
     res.status(200).json(dbs.data.map(item => {
       return {
         id: item.ref.id,
-        name: item.data.name
+        name: item.data.name,
+        secured: Boolean(item.data.secret)
       }
     }))
   } catch (e) {

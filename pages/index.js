@@ -34,7 +34,7 @@ export default () => {
           {endpoints.length > 0 ? (
             endpoints.map(endpoint => (
               <div>
-                <h3>{endpoint.id} / {endpoint.name}</h3>
+                <h3>{endpoint.secured ? '🔒' : '🔓'} {endpoint.id} / {endpoint.name}</h3>
               </div>
             ))
           ) : (
