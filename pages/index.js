@@ -26,7 +26,7 @@ export default () => {
       <Head>
         <title>Exemple d'intégration du webhook de RDV-Solidarités</title>
       </Head>
-      <h1>Exemple d'intégration du webhook de RDV-Solidarités</h1>
+      <h1>GUILLETT - Exemple d'intégration du webhook de RDV-Solidarités</h1>
       <hr />
       <div>
         <div>
