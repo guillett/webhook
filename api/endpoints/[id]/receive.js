@@ -1,8 +1,8 @@
-const { q, client } = require('../../../../lib/db')
-const { addBody, addEndpoint, addSteps, runMiddleware } = require('../../../../lib/internal')
-const { checkSignaturePresence, checkSignatureValidity } = require('../../../../lib/sign')
+const { q, client } = require('../../../lib/db')
+const { addBody, addEndpoint, addSteps, runMiddleware } = require('../../../lib/internal')
+const { checkSignaturePresence, checkSignatureValidity } = require('../../../lib/sign')
 
-const { processRequest } = require('../../../../lib/hauts_de_seine')
+const { processRequest } = require('../../../lib/hauts_de_seine')
 
 export const config = {
   api: {

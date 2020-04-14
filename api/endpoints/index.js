@@ -1,4 +1,4 @@
-const { q, client } = require('../../../lib/db')
+const { q, client } = require('../../lib/db')
 
 module.exports = async (req, res) => {
   try {
