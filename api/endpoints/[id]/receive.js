@@ -2,7 +2,13 @@ const { q, client } = require('../../../lib/db')
 const { addBody, addEndpoint, addSteps, runMiddleware } = require('../../../lib/internal')
 const { checkSignaturePresence, checkSignatureValidity } = require('../../../lib/sign')
 
-const { processRequest } = require('../../../lib/hauts_de_seine')
+const demo = require('../../../lib/demo')
+const hauts_de_seine = require('../../../lib/hauts_de_seine')
+
+const types = {
+  demo,
+  hauts_de_seine
+}
 
 export const config = {
   api: {
@@ -59,9 +65,13 @@ export default async (req, res) => {
       await runMiddleware(req, res, checkSignaturePresence)
       await runMiddleware(req, res, checkSignatureValidity)
 
-      //
-      //await runMiddleware(req, res, processRequest)
-      //
+      const type = types[req.endpoint.data.type]
+      if (type)
+      {
+        await runMiddleware(req, res, type.processRequest)
+      } else {
+        req.steps.push(`No type provided`)
+      }
     } catch (e) {
       req.steps.push(`error ❌`)
       req.response = { error: e.toString() }
