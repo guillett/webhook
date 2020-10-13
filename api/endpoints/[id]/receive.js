@@ -74,12 +74,13 @@ export default async (req, res) => {
       }
     } catch (e) {
       req.steps.push(`error ❌`)
+      req.status = 400
       req.response = { error: e.toString() }
     }
 
     await runMiddleware(req, res, saveProcess)
 
-    res.status(200).json({
+    res.status(req.status || 200).json({
       payload: req.payload,
       steps: req.steps,
       response: req.response || { status: 'ok' }
