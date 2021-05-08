@@ -12,7 +12,7 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "faunadb": "^2.14.2",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "husky": "^4.3.0",
     "lodash": "^4.17.20",
     "moment": "^2.29.1",
